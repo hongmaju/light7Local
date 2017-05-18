@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/light7.css">
+
+	<script type='text/javascript' src='./js/jquery.js' charset='utf-8'></script>
+	<style>
+		.modal-buttons a {
+    width: 100%;
+}
+	</style>
+</head>
+<body>
+
+<div class="content">
+    <div class="content-block">
+      <p><a href="#" class="alert-text">弹出文本</a></p>
+      <p><a href="#" class="alert-text-title">弹出文本和标题</a></p>
+      <p><a href="#" class="alert-text-title-callback">弹出文本、标题和回调</a></p>
+      <p><a href="#" class="alert-text-callback">弹出文本、回调</a></p>
+      <p><a href="#" class="alert-text-callback-empty">弹出自定义文本内容和回调</a></p>
+    </div>
+  </div>
+
+
+
+<script>
+	
+   
+     $(document).on('click','.alert-text',function () {
+        $.alert('Here goes alert text');
+     });
+
+    $(document).on('click','.alert-text-title', function () {
+        $.alert('Here goes alert text', 'Custom Title!');
+    });
+
+    $(document).on('click', '.alert-text-title-callback',function () {
+        $.alert('Here goes alert text', 'Custom Title!', function () {
+            $.alert('Button clicked!')
+        });
+    });
+
+    $(document).on('click', '.alert-text-callback',function () {
+        $.alert('Here goes alert text', function () {
+            $.alert('Button clicked!')
+        });
+    });
+     $(document).on('click', '.alert-text-callback-empty',function () {
+        $.alertEmpty(alertHtml(), function () {
+            // $.alert('Button clicked!')
+        });
+    });
+
+     function alertHtml(){
+   // 弹出姓名输入和提交取消按钮
+     	return " <div class=\"item-content\"><div class=\"item-media\"><i class=\"icon icon-form-name\"></i></div><div class=\"item-inner\"><div class=\"item-title label\">姓名</div><div class=\"item-input\"><input type=\"text\" placeholder=\"Your name\"></div></div></div><div class=\"content-block\"><div class=\"row\"><div class=\"col-50\"><a href=\"#\" class=\"button button-big button-fill button-danger\">取消</a></div><div class=\"col-50\"><a href=\"#\" class=\"button button-big button-fill button-success\">提交</a></div></div></div>";
+
+     // 	return "<div class=\"content\"><div class=\"list-block\"><ul><!-- Text inputs --><li><div class=\"item-content\"><div class=\"item-media\"><i class=\"icon icon-form-name\"></i></div><div class=\"item-inner\"><div class=\"item-title label\">姓名</div><div class=\"item-input\"><input type=\"text\" placeholder=\"Your name\"></div></div></div></li><li><div class=\"item-content\"><div class=\"item-media\"><i class=\"icon icon-form-email\"></i></div><div class=\"item-inner\"><div class=\"item-title label\">邮箱</div><div class=\"item-input\"><input type=\"email\" placeholder=\"E-mail\"></div></div></div></li><li><div class=\"item-content\"><div class=\"item-media\"><i class=\"icon icon-form-password\"></i></div><div class=\"item-inner\"><div class=\"item-title label\">密码</div><div class=\"item-input\"><input type=\"password\" placeholder=\"Password\" class=\"\"></div></div></div></li><li><div class=\"item-content\"><div class=\"item-media\"><i class=\"icon icon-form-gender\"></i></div><div class=\"item-inner\"><div class=\"item-title label\">性别</div><div class=\"item-input\"><select><option>Male</option><option>Female</option></select></div></div></div></li><!-- Date --><li><div class=\"item-content\"><div class=\"item-media\"><i class=\"icon icon-form-calendar\"></i></div><div class=\"item-inner\"><div class=\"item-title label\">生日</div><div class=\"item-input\"><input type=\"date\" placeholder=\"Birth day\" value=\"2014-04-30\"></div></div></div></li><!-- Switch (Checkbox) --><li><div class=\"item-content\"><div class=\"item-media\"><i class=\"icon icon-form-toggle\"></i></div><div class=\"item-inner\"><div class=\"item-title label\">开关</div><div class=\"item-input\"><label class=\"label-switch\"><input type=\"checkbox\"><div class=\"checkbox\"></div></label></div></div></div></li><li class=\"align-top\"><div class=\"item-content\"><div class=\"item-media\"><i class=\"icon icon-form-comment\"></i></div><div class=\"item-inner\"><div class=\"item-title label\">文本域</div><div class=\"item-input\"><textarea></textarea></div></div></div></li></ul></div><div class=\"content-block\"><div class=\"row\"><div class=\"col-50\"><a href=\"#\" class=\"button button-big button-fill button-danger\">取消</a></div><div class=\"col-50\"><a href=\"#\" class=\"button button-big button-fill button-success\">提交</a></div></div></div></div>";
+     	
+     // 
+   
+  }
+ $.config = {
+    //autoInit: true, //no recommend
+    router: false
+ }
+</script>
+<script type='text/javascript' src='./js/light7.js' charset='utf-8'></script>
+<!-- <script type='text/javascript' src='./js/sm-extend.js' charset='utf-8'></script> -->
+</body>
+</html>
