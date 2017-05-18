@@ -1,1 +1,1 @@
-# light7Local
+将light7本地化，使用的页面是html，并添加了自定义内容的弹出框
