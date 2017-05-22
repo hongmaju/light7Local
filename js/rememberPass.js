@@ -22,17 +22,23 @@ $(document).ready(function() {
     $('#wsc-username').val(username);　　　　
     $('#wsc-password').val(password);　　　　
     if (username != null && username != '' && password != null && password != '') { //选中保存秘密的复选框
-        　　　　　　 $("#rmbUser").attr('checked', true);　　　 }
+        　　　　　　
+        $("#rmbUser").attr('checked', "checked");　
+    }
+
+   
+
+
 });
 
 function saveUserInfo() {
     //alert("保存密码");
-    // 	var swith=$("#rmbUser").attr("checked");
+    // var swith=$("#rmbUser").val();
     // var tt=$("#wsc-username").val();
     // var bb=$("#wsc-password").val();
 
     if ($("#rmbUser").attr("checked") == "checked") {
-        var cookqqq = $.cookie("rmbUser") + $.cookie("userName") + $.cookie("passWord");
+        // var cookqqq = $.cookie("rmbUser") + $.cookie("userName") + $.cookie("passWord");
         var userName = $("#wsc-username").val();
         var passWord = $("#wsc-password").val();
         // if ($.cookie("rmbUser") ==undefined) {
@@ -56,13 +62,14 @@ function saveUserInfo() {
         //var c=userName+"|||||"+passWord;
         //var cookqqqjio = $.cookie("rmbUser") + $.cookie("userName") + $.cookie("passWord");
     } else {
-        $.cookie("rmbUser", "false", { expires: -1 }); // 删除 cookie
-        $.cookie("userName", '', { expires: -1 });
-        $.cookie("passWord", '', { expires: -1 });
+        // $.cookie("rmbUser", "false", { expires: -1 }); // 删除 cookie
+        // $.cookie("userName", '', { expires: -1 });
+        // $.cookie("passWord", '', { expires: -1 });
 
-		$.cookie('rmbUser', 'false', { expires: -1,path: '/'});
-        $.cookie('userName', '', { expires: -1,path: '/'});
-        $.cookie('passWord', '', { expires: -1,path: '/'});
+        $.cookie('rmbUser', 'false', { expires: -1, path: '/' });
+        $.cookie('userName', '', { expires: -1, path: '/' });
+        $.cookie('passWord', '', { expires: -1, path: '/' });
     }
     //alert($("#wsc-username").val()+"|||||"+$("#wsc-password").val());
 }
+
