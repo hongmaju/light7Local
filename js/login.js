@@ -1,15 +1,11 @@
 $(document).ready(function() {
-	// light7初始化
-    $.config = {
-        // autoInit: true //no recommend
-        router: false
-    }
+   
     // 弹出底部窗体
     $(document).on('click', '.open-about', function() {
         $.popup('.popup-about');
     });
-
-
+    // 触发手势密码设置
+    $('.open-about').trigger("click");
     // 手势密码开始
     var R = 26,
         CW = 400,
@@ -123,11 +119,21 @@ $(document).ready(function() {
         canvasContainer.addEventListener("touchend", function(e) {
             cxt.clearRect(0, 0, CW, CH);
             Draw(cxt, PointLocationArr, LinePoint, null);
-            alert("密码结果是：" + LinePoint.join("->"));
+
+            if (LinePoint.length > 4) {
+                // alert("密码结果是：" + LinePoint.join("->"));
+                // $.alert("密码结果是：" + LinePoint.join("->"));
+            } else {
+                // $.alert('位数不能少于4位', '注意');
+                //alert("位数不能少于4位");
+                LinePoint = [];
+                //window.location.reload();//刷新当前页面.
+            }
+
             LinePoint = [];
         }, false);
     }
-// 手势密码结束
+    // 手势密码结束
 
 
 });
