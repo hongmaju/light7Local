@@ -26,7 +26,6 @@ $(document).ready(function() {
         $("#rmbUser").attr('checked', "checked");　
     }
 
-   
 
 
 });

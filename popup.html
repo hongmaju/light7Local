@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+  <title>Document</title>
+  
+  <link rel="stylesheet" href="./css/light7.css">
+<script type="text/javascript" src="./js/jquery.js"></script>
+
+</head>
+<body>
+<header class="bar bar-nav">
+    <h1 class="title">Popup(JavaScript)</h1>
+</header>
+
+<div class="content">
+    <div class="content-block">
+      <p><a href="#" class="open-about">打开关于弹出窗 </a></p>
+      <p><a href="#" class="open-services">打开服务弹出窗 </a></p>
+    </div>
+       
+</div> 
+<!-- About Popup -->
+<div class="popup popup-about">
+  <div class="content-block">
+    <p>关于</p>
+    <p><a href="#" class="close-popup">关闭弹出窗</a></p>
+    <p>Lorem ipsum dolor ...</p>
+  </div>
+</div>
+<!-- Services Popup -->
+<div class="popup popup-services">
+  <div class="content-block">
+    <p>服务</p>
+    <p><a href="#" class="close-popup">关闭服务弹出窗</a></p>
+    <p>Lorem ipsum dolor ...</p>
+  </div>
+</div> 
+
+<script>
+    //关闭light7自带路由(需在调用light7.min.js之前关闭)，使用vue-router
+  
+  $.config = {
+    // autoInit: true //no recommend
+      router: false
+  }
+$(document).on('click','.open-about', function () {
+  $.popup('.popup-about');
+});
+ 
+$(document).on('click','.open-services', function () {
+  $.popup('.popup-services');
+});   
+    </script>
+<script type="text/javascript" src="./js/light7.js"></script> 
+
+</body>
+</html>

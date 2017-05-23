@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/light7.css">
+<!--     <link rel="stylesheet" type="text/css" href="./css/base.css"> -->
+    <link rel="stylesheet" type="text/css" href="./css/login.css">
+    <script type="text/javascript" src="./js/jquery.js"></script>
+</head>
+
+<body>
+    <header class="bar bar-nav">
+        <h1 class="title">登录收银宝账号</h1>
+    </header>
+    <div class="content">
+        <header>
+            <div id="header">
+                <a class="logo" title="美萍收银宝">
+                    <img src="./img/mplogin6.png">
+                </a>
+            </div>
+        </header>
+        <div class="list-block">
+            <ul>
+                <!-- Text inputs -->
+                <li>
+                    <div class="item-content">
+                        <div class="item-media"><i class="icon icon-form-name"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title label">用户名</div>
+                            <div class="item-input">
+                                <input type="text" placeholder="输入用户名">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-media"><i class="icon icon-form-password"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title label">密码</div>
+                            <div class="item-input">
+                                <input type="password" placeholder="输入密码" class="">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content-block">
+            <p><a href="#" class="button button-big">登录</a></p>
+        </div>
+        <div class="content-block">
+            <p><a href="#" class="open-about">设置手势密码 </a></p>
+        </div>
+        <div class="bar bar-footer">
+  <a class="icon icon-edit pull-left"></a>
+  <a class="icon icon-settings pull-right"></a>
+</div>
+    </div>
+    <!-- 关于弹出窗 Popup -->
+    <div class="popup popup-about">
+        <div class="content-block">
+            <p>关于</p>
+            <p><a href="#" class="close-popup">关闭弹出窗</a></p>
+            <p>Lorem ipsum dolor ...</p>
+        </div>
+    </div>
+    <script>
+    //关闭light7自带路由(需在调用light7.min.js之前关闭)，使用vue-router
+
+    $.config = {
+        // autoInit: true //no recommend
+        router: false
+    }
+    $(document).on('click', '.open-about', function() {
+        $.popup('.popup-about');
+    });
+    </script>
+    <script type="text/javascript" src="./js/light7.js"></script>
+</body>
+
+</html>
