@@ -129,14 +129,14 @@ var login = {
                 Draw(cxt, PointLocationArr, LinePoint, null);
 
                 if (LinePoint.length >= 4) {
-                    // alert("密码结果是：" + LinePoint.join("->"));
+                    alert("密码结果是：" + LinePoint.join("->"));
                     // $.alert("密码结果是：" + LinePoint.join("->"));
-                    $.toast("密码结果是：" + LinePoint.join("->"));
+                    // $.toast("密码结果是：" + LinePoint.join("->"));
                 } else {
                     // $.alert('位数不能少于4位', '注意');
-                    // alert("位数不能少于4位");
+                     alert("位数不能少于4位");
                     LinePoint = [];
-                    $.toast("位数不能少于4位");
+                    // $.toast("位数不能少于4位");
                     // window.location.reload();//刷新当前页面.
                 }
 
