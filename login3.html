@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/light7.css">
+    <link rel="stylesheet" type="text/css" href="./css/login3.css">
+    <script type="text/javascript" src="./js/jquery.js"></script>
+    <!-- <script type="text/javascript" src="./js/jquery.cookie.js"></script> -->
+    <script type="text/javascript" src="./js/login3.js"></script>
+  
+</head>
+
+<body>
+    <header class="bar bar-nav">
+        <h1 class="title">登录收银宝账号</h1>
+    </header>
+    <div class="content">
+        <header>
+            <div id="header">
+                <a class="logo" title="美萍收银宝">
+                    <img src="./img/mplogin6.png">
+                </a>
+            </div>
+        </header>
+        <div class="list-block">
+            <ul>
+                <!-- Text inputs -->
+                <li>
+                    <div class="item-content">
+                        <div class="item-media"><i class="icon icon-form-name"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title label">用户名</div>
+                            <div class="item-input">
+                                <input type="text" placeholder="输入用户名">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-content">
+                        <div class="item-media"><i class="icon icon-form-password"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title label">密码</div>
+                            <div class="item-input">
+                                <input type="password" placeholder="输入密码" class="">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="content-block">
+            <p><a href="#" class="button button-big">登录</a></p>
+        </div>
+        <div class="content-block">
+            <p><a href="#" class="open-about">设置手势密码 </a></p>
+        </div>
+        <div class="bar bar-footer">
+            <a class="icon icon-edit pull-right"></a>
+            <a class="icon icon-settings pull-left"></a>
+        </div>
+    </div>
+    <!-- 关于弹出窗 Popup -->
+    <div class="popup popup-about">
+        <div class="content-block">
+         <div id="gesturepwd"></div>
+            <!--  <p>设置手势密码</p> -->
+            <!--  <p><a href="#" class="close-popup">关闭弹出窗</a></p> -->
+            <div class="item-content">
+                <div class="item-inner">
+                    <div class="item-title label">是否启用手势密码</div>
+                    <div class="item-input">
+                        <label class="label-switch">
+                            <input type="checkbox">
+                            <div class="checkbox"></div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="content-block">
+                <div class="row">
+                    <div class="col-50"><a href="#" class="button button-big button-fill button-warning  close-popup">返回</a></div>
+                    <div class="col-50"><a href="#" class="button button-big button-fill button-success">确定</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    // light7初始化
+    $.config = {
+        // autoInit: true //no recommend
+        router: false
+    }
+
+   
+    </script>
+    <script type="text/javascript" src="./js/light7.js"></script>
+
+	<script src="./js/jquery.gesture.password.js"></script>
+	<script>
+$("#gesturepwd").GesturePasswd({
+    backgroundColor: "#252736", //背景色
+    color: "#FFFFFF", //主要的控件颜色
+    roundRadii: 25, //大圆点的半径
+    pointRadii: 6, //大圆点被选中时显示的圆心的半径
+    space: 30, //大圆点之间的间隙
+    width: 240, //整个组件的宽度
+    height: 240, //整个组件的高度
+    lineColor: "#00aec7", //用户划出线条的颜色
+    zindex: 100 //整个组件的css z-index属性
+});
+$("#gesturepwd").on("hasPasswd", function(e, passwd) {
+    var result;
+
+    if (passwd == "1235789") {
+
+        result = true;
+    } else {
+        result = false;
+    }
+
+
+
+    if (result == true) {
+        $("#gesturepwd").trigger("passwdRight");
+        setTimeout(function() {
+
+            //密码验证正确后的其他操作，打开新的页面等。。。
+            alert("密码正确！")
+        }, 500); //延迟半秒以照顾视觉效果
+    } else {
+        $("#gesturepwd").trigger("passwdWrong");
+
+        //密码验证错误后的其他操作。。。
+
+    }
+});
+</script>
+</body>
+
+</html>

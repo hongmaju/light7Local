@@ -1,0 +1,11 @@
+a.logo img {
+    width: 100%;
+    width: 240px;
+    height: 80px;
+    margin: 0 auto;
+    display: block;
+}
+div#gesturepwd {
+    display: block;
+    margin: 0 auto;
+}
