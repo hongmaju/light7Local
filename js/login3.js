@@ -53,9 +53,42 @@ var login = {
             }
         });
     },
+    saveUserInfo: function() {
+        if ($("#rmbUser").attr("checked") == "checked") {
+            var userName = $("#wsc-username").val();
+            var passWord = $("#wsc-password").val();
+
+            $.cookie('userName', userName, { expires: 7, path: '/', secure: false });
+            $.cookie('passWord', passWord, { expires: 7, path: '/', secure: false });
+            $.cookie('rmbUser', 'true', { expires: 7, path: '/', secure: false });
+        } else {
+            // $.cookie("rmbUser", "false", { expires: -1 }); // 删除 cookie
+            // $.cookie("userName", '', { expires: -1 });
+            // $.cookie("passWord", '', { expires: -1 });
+
+            $.cookie('rmbUser', 'false', { expires: -1, path: '/' });
+            $.cookie('userName', '', { expires: -1, path: '/' });
+            $.cookie('passWord', '', { expires: -1, path: '/' });
+        }
+    },
+    writeUserInfo: function() {
+
+        var username = $.cookie('userName');　　　　
+        var password = $.cookie('passWord');
+
+        　　　　 //将获取的值填充入输入框中
+        　　　　
+        $('#wsc-username').val(username);　　　　
+        $('#wsc-password').val(password);　　　　
+        if (username != null && username != '' && password != null && password != '') { //选中保存秘密的复选框
+            　　　　　　
+            $("#rmbUser").attr('checked', "checked");　
+        }
+    },
 
     Init: function() {
         login.DrawLine();
+        login.writeUserInfo();
     }
 
 };

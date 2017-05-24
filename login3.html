@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/light7.css">
     <link rel="stylesheet" type="text/css" href="./css/login3.css">
     <script type="text/javascript" src="./js/jquery.js"></script>
-    <!-- <script type="text/javascript" src="./js/jquery.cookie.js"></script> -->
+    <script type="text/javascript" src="./js/jquery.cookie.js"></script>
     <script type="text/javascript" src="./js/login3.js"></script>
 </head>
 
@@ -33,7 +33,7 @@
                         <div class="item-inner">
                             <div class="item-title label">用户名</div>
                             <div class="item-input">
-                                <input type="text" placeholder="输入用户名">
+                                <input type="text" placeholder="输入用户名" id="wsc-username">
                             </div>
                         </div>
                     </div>
@@ -44,7 +44,7 @@
                         <div class="item-inner">
                             <div class="item-title label">密码</div>
                             <div class="item-input">
-                                <input type="password" placeholder="输入密码" class="">
+                                <input type="password" placeholder="输入密码" class="" id="wsc-password">
                             </div>
                         </div>
                     </div>
@@ -52,7 +52,7 @@
             </ul>
         </div>
         <div class="content-block">
-            <p><a href="#" class="button button-big">登录</a></p>
+            <p><a href="#" class="button button-big" onclick=" login.saveUserInfo();">登录</a></p>
         </div>
         <div class="content-block">
             <p><a href="#" class="open-about">设置手势密码 </a></p>
@@ -73,7 +73,7 @@
                     <div class="item-title label">是否启用手势密码</div>
                     <div class="item-input">
                         <label class="label-switch">
-                            <input type="checkbox">
+                            <input type="checkbox" id="rmbUser" checked="true">
                             <div class="checkbox"></div>
                         </label>
                     </div>
