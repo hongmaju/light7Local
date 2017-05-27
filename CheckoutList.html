@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/light7.css">
+    <script type="text/javascript" src="./js/jquery.js"></script>
+    <script type="text/javascript">
+    $(document).on('click', '.create-actions', function() {
+        // alert($.trim($(this).text()));
+        var a = $.trim($(this).text());
+        var buttons1 = [{
+            text: '请选择',
+            label: true
+        }, {
+            text: '赠菜',
+            bold: true,
+            color: 'danger',
+            onClick: function() {
+                $.alert("你选择了“赠菜“");
+            }
+        }, {
+            text: '退菜',
+            onClick: function() {
+                $.alert("你选择了“退菜“");
+            }
+        }];
+        var buttons2 = [{
+            text: '取消',
+            bg: 'danger'
+        }];
+        var groups = [buttons1, buttons2];
+        $.actions(groups);
+    });
+    </script>
+    <style type="text/css">
+    .content-block-title {
+        margin: 0.75rem .75rem .5rem;
+        font-size: 1.0rem;
+    }
+    
+    .modal-overlay.modal-overlay-visible {
+        -webkit-transition-duration: 30ms;
+        -o-transition-duration: 30ms;
+        transition-duration: 30ms;
+    }
+
+    </style>
+</head>
+
+<body>
+    <!-- page 容器 -->
+    <div class="page">
+        <!-- 标题栏 -->
+        <header class="bar bar-nav">
+            <a class="icon icon-home pull-left open-panel"></a>
+            <h1 class="title">碧桃春</h1>
+        </header>
+        <!-- 这里是页面内容区 -->
+        <div class="content">
+            <div class="content-block-title">菜品 (合计：¥275.2)</div>
+            <div class="list-block">
+                <ul>
+                    <li class="item-content create-actions">
+                        <div class="item-inner">
+                            <div class="item-title">1.牡丹燕菜</div>
+                            <div class="item-after">300*1份=240</div>
+                        </div>
+                    </li>
+                    <li class="item-content create-actions">
+                        <div class="item-inner">
+                            <div class="item-title">2.水煮牛肉(小份)</div>
+                            <div class="item-after">300*1份=240</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <nav class="bar bar-tab">
+                <a class="tab-item" href="#">加菜</a>
+                <a class="tab-item" href="#">打印清单</a>
+                <a class="tab-item" href="#">结账</a>
+            </nav>
+        </div>
+    </div>
+    <script>
+    //关闭light7自带路由(需在调用light7.min.js之前关闭)，使用vue-router
+
+    $.config = {
+        autoInit: true //no recommend
+    }
+    </script>
+    <script type="text/javascript" src="./js/light7.js"></script>
+</body>
+
+</html>
