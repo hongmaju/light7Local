@@ -56,9 +56,16 @@ var setPwdLine = {
     updateLinePwd: function() {
 
     },
+    //返回到主页
+    iconLeftClick: function() {
+        $(".icon-left").click(function() {
+            alert("1212");
+        });
+    },
     Init: function() {
         setPwdLine.getOpenCloseLinePwdStates();
         setPwdLine.linePwdLoad();
+        setPwdLine.iconLeftClick();
     }
 
 };
