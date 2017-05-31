@@ -9,36 +9,7 @@
     <link rel="stylesheet" href="./css/light7.css">
     <script type="text/javascript" src="./js/jquery.js"></script>
     <!-- <script type="text/javascript" src="./js/jquery-2.1.4.min.js"></script> -->
-    <script type="text/javascript">
-    $(document).on('click', '.create-actions', function() {
-        // alert($.trim($(this).text()));
-        var a = $.trim($(this).text());
-        var buttons1 = [{
-            text: '请选择',
-            label: true
-        }, {
-            text: '赠菜',
-            bold: true,
-            color: 'danger',
-            onClick: function() {
-                $.popup('.popup-about');
-                // $.alert("你选择了“赠菜“");
-            }
-        }, {
-            text: '退菜',
-            onClick: function() {
-                // $.alert("你选择了“退菜“");
-                $.popup('.popup-services');
-            }
-        }];
-        var buttons2 = [{
-            text: '取消',
-            bg: 'danger'
-        }];
-        var groups = [buttons1, buttons2];
-        $.actions(groups);
-    });
-    </script>
+    
     <style type="text/css">
     .content-block-title {
         margin: 0.75rem .75rem .5rem;
@@ -73,8 +44,9 @@
 </head>
 
 <body>
+<div class="page-group">
     <!-- page 容器 -->
-    <div class="page">
+    <div class="page page-current" id="routers-index">
         <!-- 标题栏 -->
         <header class="bar bar-nav">
             <a class="icon icon-home pull-left open-panel"></a>
@@ -97,126 +69,6 @@
                             <div class="item-after">300*1份=240</div>
                         </div>
                     </li>
-                    <li class="item-content create-actions">
-                        <div class="item-inner">
-                            <div class="item-title">1.牡丹燕菜</div>
-                            <div class="item-after">300*1份=240</div>
-                        </div>
-                    </li>
-                    <li class="item-content create-actions">
-                        <div class="item-inner">
-                            <div class="item-title">2.水煮牛肉(小份)</div>
-                            <div class="item-after">300*1份=240</div>
-                        </div>
-                    </li>
-                    <li class="item-content create-actions">
-                        <div class="item-inner">
-                            <div class="item-title">1.牡丹燕菜</div>
-                            <div class="item-after">300*1份=240</div>
-                        </div>
-                    </li>
-                    <li class="item-content create-actions">
-                        <div class="item-inner">
-                            <div class="item-title">2.水煮牛肉(小份)</div>
-                            <div class="item-after">300*1份=240</div>
-                        </div>
-                    </li>
-                    <li class="item-content create-actions">
-                        <div class="item-inner">
-                            <div class="item-title">1.牡丹燕菜</div>
-                            <div class="item-after">300*1份=240</div>
-                        </div>
-                    </li>
-                    <li class="item-content create-actions">
-                        <div class="item-inner">
-                            <div class="item-title">2.水煮牛肉(小份)</div>
-                            <div class="item-after">300*1份=240</div>
-                        </div>
-                    </li>
-                    <li class="item-content create-actions">
-                        <div class="item-inner">
-                            <div class="item-title">1.牡丹燕菜</div>
-                            <div class="item-after">300*1份=240</div>
-                        </div>
-                    </li>
-                    <li class="item-content create-actions">
-                        <div class="item-inner">
-                            <div class="item-title">2.水煮牛肉(小份)</div>
-                            <div class="item-after">300*1份=240</div>
-                        </div>
-                    </li>
-                    <li class="item-content create-actions">
-                        <div class="item-inner">
-                            <div class="item-title">1.牡丹燕菜</div>
-                            <div class="item-after">300*1份=240</div>
-                        </div>
-                    </li>
-                    <li class="item-content create-actions">
-                        <div class="item-inner">
-                            <div class="item-title">2.水煮牛肉(小份)</div>
-                            <div class="item-after">300*1份=240</div>
-                        </div>
-                    </li>
-                    <li class="item-content create-actions">
-                        <div class="item-inner">
-                            <div class="item-title">1.牡丹燕菜</div>
-                            <div class="item-after">300*1份=240</div>
-                        </div>
-                    </li>
-                    <li class="item-content create-actions">
-                        <div class="item-inner">
-                            <div class="item-title">2.水煮牛肉(小份)</div>
-                            <div class="item-after">300*1份=240</div>
-                        </div>
-                    </li>
-                    <li class="item-content create-actions">
-                        <div class="item-inner">
-                            <div class="item-title">1.牡丹燕菜</div>
-                            <div class="item-after">300*1份=240</div>
-                        </div>
-                    </li>
-                    <li class="item-content create-actions">
-                        <div class="item-inner">
-                            <div class="item-title">2.水煮牛肉(小份)</div>
-                            <div class="item-after">300*1份=240</div>
-                        </div>
-                    </li>
-                    <li class="item-content create-actions">
-                        <div class="item-inner">
-                            <div class="item-title">1.牡丹燕菜</div>
-                            <div class="item-after">300*1份=240</div>
-                        </div>
-                    </li>
-                    <li class="item-content create-actions">
-                        <div class="item-inner">
-                            <div class="item-title">2.水煮牛肉(小份)</div>
-                            <div class="item-after">300*1份=240</div>
-                        </div>
-                    </li>
-                    <li class="item-content create-actions">
-                        <div class="item-inner">
-                            <div class="item-title">1.牡丹燕菜</div>
-                            <div class="item-after">300*1份=240</div>
-                        </div>
-                    </li>
-                    <li class="item-content create-actions">
-                        <div class="item-inner">
-                            <div class="item-title">2.水煮牛肉(小份)</div>
-                            <div class="item-after">300*1份=240</div>
-                        </div>
-                    </li>
-                    <li class="item-content create-actions">
-                        <div class="item-inner">
-                            <div class="item-title">1.牡丹燕菜</div>
-                            <div class="item-after">300*1份=240</div>
-                        </div>
-                    </li>
-                    <li class="item-content create-actions">
-                        <div class="item-inner">
-                            <div class="item-title">3.水煮牛肉(小份)</div>
-                            <div class="item-after">300*1份=240</div>
-                        </div>
-                    </li>
                 </ul>
             </div>
             <div class="bar bar-footer-secondary">
@@ -230,67 +82,100 @@
             </nav>
         </div>
     </div>
-    <!-- About Popup -->
-<div class="popup popup-about ">
-
-    <header class="bar bar-nav ">
-            <a class="icon icon-left pull-left open-panel close-popup "></a>
-            <h1 class="title ">牡丹燕菜</h1>
-        </header>
-        <div class="content-block">
-            <div class="list-block">
-                <ul>
-                    <!-- Text inputs -->
-                    <li>
-                        <div class="item-content">
-                            <div class="item-inner">
-                                <div class="item-title label">赠菜数量：</div>
-                                <div class="item-input">
-                                    <input type="text" placeholder="选择数量" id="picker" value="1" readonly="">
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-   <div class="content-block ">
-    <p><a href="# " class="button button-big ">Big Button </a></p>
-    <!-- <p><a href="# " class="button button-big button-round ">Big Round Button </a></p> -->
-  </div>
-</div>
- 
-<!-- Services Popup -->
-<div class="popup popup-services ">
+   <!-- 退菜页面 -->
+ <div class="page" id="routers-index-inner-2">
     <div class="content-block ">
         <p>退菜</p>
         <p><a href="# " class="close-popup ">Close popup</a></p>
         <p>Lorem ipsum dolor ...</p>
     </div>
 </div>
-  
-    <script>
-    //关闭light7自带路由(需在调用light7.min.js之前关闭)，使用vue-router
+    <!-- 赠菜页面 -->
+ <div class="page" id="routers-index-inner-1">
 
-    $.config = {
-        autoInit: true, //no recommend
-         // router: false
+    <header class="bar bar-nav ">
+           <a class="button button-link button-nav pull-left back" href="#routers-index">
+            <span class="icon icon-left"></span>
+            返回
+        </a>
+            <h1 class="title ">牡丹燕菜</h1>
+        </header>
+    <div class="list-block ">
+      <ul>
+        <li class="item-content item-link ">
+          <div class="item-media "><i class="icon icon-f7 "></i></div>
+          <div class="item-inner ">
+            <div class="item-title ">Name</div>
+            <div class="item-after ">Potato</div>
+          </div>
+        </li>
+        <li class="item-content item-link ">
+          <div class="item-media "><i class="icon icon-f7 "></i></div>
+          <div class="item-inner ">
+            <div class="item-title ">Amount</div>
+            <div class="item-after ">123</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+   <div class="content-block ">
+    <p><a href="# " class="button button-big ">Big Button </a></p>
+    <!-- <p><a href="# " class="button button-big button-round ">Big Round Button </a></p> -->
+  </div>
+</div>
+ 
+
+  </div>
+
+<script>
+//关闭light7自带路由(需在调用light7.min.js之前关闭)，使用vue-router
+
+$.config = {
+    autoInit: true,
+    routerFilter: function($link) {
+        // 某个区域的 a 链接不想使用路由功能
+        if ($link.is('.disable-router a')) {
+            return false;
+        }
+
+        return true;
     }
-    </script>
-    <script type="text/javascript " src="./js/light7.js "></script>
-    <script type="text/javascript ">
-$("#picker ").picker({
-    toolbarTemplate: '<header class="bar bar-nav ">\
-  \
-  <button class="button button-link pull-right close-picker ">确定</button>\
-  <h1 class="title ">标题</h1>\
-  </header>',
-    cols: [{
-        textAlign: 'center',
-        values: ['1', '2','3','4','5', '6','7','8']
-    }]
-});
+}
 </script>
+    <script type="text/javascript " src="./js/light7.js "></script>
+<script type="text/javascript">
+    $(document).on('click', '.create-actions', function() {
+        // alert($.trim($(this).text()));
+        var a = $.trim($(this).text());
+        var buttons1 = [{
+            text: '请选择',
+            label: true
+        }, {
+            text: '赠菜',
+            bold: true,
+            color: 'danger',
+            onClick: function() {
+                //$.popup('.popup-about');
+                
+                $.router.loadPage("#routers-index-inner-1"); 
+                // $.alert("你选择了“赠菜“");
+            }
+        }, {
+            text: '退菜',
+            onClick: function() {
+                // $.alert("你选择了“退菜“");
+                //$.popup('.popup-services');
+            }
+        }];
+        var buttons2 = [{
+            text: '取消',
+            bg: 'danger'
+        }];
+        var groups = [buttons1, buttons2];
+        $.actions(groups);
+    });
+    </script>
 </body>
 
 </html>
+<!-- <a class="button button-link button-nav pull-left back "> -->
