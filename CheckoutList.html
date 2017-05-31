@@ -29,6 +29,8 @@
         }, {
             text: '退菜',
             onClick: function() {
+              
+                $.router.loadPage("#routers-index-inner-2"); 
                 // $.alert("你选择了“退菜“");
                 //$.popup('.popup-services');
             }
@@ -116,9 +118,45 @@
    <!-- 退菜页面 -->
  <div class="page" id="routers-index-inner-2">
     <div class="content-block ">
-        <p>退菜</p>
-        <p><a href="# " class="close-popup ">Close popup</a></p>
-        <p>Lorem ipsum dolor ...</p>
+           <header class="bar bar-nav ">
+           <a class="button button-link button-nav pull-left back" href="#routers-index">
+            <span class="icon icon-left"></span>
+            返回
+        </a>
+            <h1 class="title ">牡丹燕菜</h1>
+        </header>
+        <div class="content-block">
+            <div class="list-block">
+                <ul>
+                    <!-- Text inputs -->
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">退菜数量：</div>
+                                <div class="item-input">
+                                    <input type="text" placeholder="选择退菜数量" id="backPicker" value="1" readonly="">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                         <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">退菜原因：</div>
+                                <div class="item-input">
+                                    <input type="text" placeholder="选择退菜原因" id="backPickerReason" value="盘子不干净" readonly="">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+   <div class="content-block ">
+    <p><a href="# " class="button button-big ">确定</a></p>
+    <!-- <p><a href="# " class="button button-big button-round ">Big Round Button </a></p> -->
+  </div>
     </div>
 </div>
     <!-- 赠菜页面 -->
@@ -206,6 +244,28 @@ $("#pickerReason").picker({
     cols: [{
         textAlign: 'center',
         values: ['经理免单', '老板免单','生日','节日']
+    }]
+});
+$("#backPicker").picker({
+    toolbarTemplate: '<header class="bar bar-nav">\
+  \
+  <button class="button button-link pull-right close-picker">确定</button>\
+  <h1 class="title">退菜数量</h1>\
+  </header>',
+    cols: [{
+        textAlign: 'center',
+        values: ['1', '2','3','4','5', '6','7','8']
+    }]
+});
+$("#backPickerReason").picker({
+    toolbarTemplate: '<header class="bar bar-nav">\
+  \
+  <button class="button button-link pull-right close-picker">确定</button>\
+  <h1 class="title">退菜原因</h1>\
+  </header>',
+    cols: [{
+        textAlign: 'center',
+        values: ['有头发', '太咸','没熟','盘子不干净']
     }]
 });
 </script>
