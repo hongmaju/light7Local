@@ -28,7 +28,7 @@
             text: '退菜',
             onClick: function() {
                 // $.alert("你选择了“退菜“");
-                 $.popup('.popup-services');
+                $.popup('.popup-services');
             }
         }];
         var buttons2 = [{
@@ -64,6 +64,10 @@
     
     nav.bar.bar-tab {
         position: fixed;
+    }
+    
+    .list-block {
+        margin-top: 44px;
     }
     </style>
 </head>
@@ -228,17 +232,40 @@
     </div>
     <!-- About Popup -->
 <div class="popup popup-about ">
-    <div class="content-block ">
-        <p>赠菜</p>
-        <p><a href="# " class="close-popup">Close popup</a></p>
-        <p>Lorem ipsum dolor ...</p>
+
+    <header class="bar bar-nav ">
+            <a class="icon icon-left pull-left open-panel close-popup"></a>
+            <h1 class="title ">牡丹燕菜</h1>
+        </header>
+    <div class="list-block ">
+      <ul>
+        <li class="item-content item-link ">
+          <div class="item-media "><i class="icon icon-f7 "></i></div>
+          <div class="item-inner ">
+            <div class="item-title ">Name</div>
+            <div class="item-after ">Potato</div>
+          </div>
+        </li>
+        <li class="item-content item-link ">
+          <div class="item-media "><i class="icon icon-f7 "></i></div>
+          <div class="item-inner ">
+            <div class="item-title ">Amount</div>
+            <div class="item-after ">123</div>
+          </div>
+        </li>
+      </ul>
     </div>
+   <div class="content-block">
+    <p><a href="#" class="button button-big">Big Button </a></p>
+    <!-- <p><a href="#" class="button button-big button-round">Big Round Button </a></p> -->
+  </div>
 </div>
+ 
 <!-- Services Popup -->
 <div class="popup popup-services ">
     <div class="content-block ">
         <p>退菜</p>
-        <p><a href="# " class="close-popup">Close popup</a></p>
+        <p><a href="# " class="close-popup ">Close popup</a></p>
         <p>Lorem ipsum dolor ...</p>
     </div>
 </div>

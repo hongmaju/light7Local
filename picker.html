@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/light7.css">
+    <script src="./js/jquery-2.1.4.min.js"></script>
+    <style type="text/css">
+    input#picker {
+        /* padding-top: 99px; */
+        margin-top: 69px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <header class="bar bar-nav">
+            <a class="icon icon-left pull-left open-panel"></a>
+            <h1 class="title">picker</h1>
+        </header>
+        <input type="text" id='picker' />
+    </div>
+</body>
+<script>
+//关闭light7自带路由(需在调用light7.min.js之前关闭)，使用vue-router
+
+$.config = {
+    autoInit: true, //no recommend
+    router: false
+}
+</script>
+<script type="text/javascript" src="./js/light7.js"></script>
+<script type="text/javascript">
+$("#picker").picker({
+    toolbarTemplate: '<header class="bar bar-nav">\
+  <button class="button button-link pull-left">按钮</button>\
+  <button class="button button-link pull-right close-picker">确定</button>\
+  <h1 class="title">标题</h1>\
+  </header>',
+    cols: [{
+        textAlign: 'center',
+        values: ['iPhone 4', 'iPhone 4S', 'iPhone 5', 'iPhone 5S', 'iPhone 6', 'iPhone 6 Plus', 'iPad 2', 'iPad Retina', 'iPad Air', 'iPad mini', 'iPad mini 2', 'iPad mini 3']
+    }]
+});
+</script>
+
+</html>
