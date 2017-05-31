@@ -8,9 +8,8 @@
     <link rel="stylesheet" href="./css/light7.css">
     <script src="./js/jquery-2.1.4.min.js"></script>
     <style type="text/css">
-    input#picker {
-        /* padding-top: 99px; */
-        margin-top: 69px;
+    .content-block {
+        margin-top: 50px;
     }
     </style>
 </head>
@@ -21,7 +20,23 @@
             <a class="icon icon-left pull-left open-panel"></a>
             <h1 class="title">picker</h1>
         </header>
-        <input type="text" id='picker' />
+        <div class="content-block">
+            <div class="list-block">
+                <ul>
+                    <!-- Text inputs -->
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">赠菜数量：</div>
+                                <div class="item-input">
+                                    <input type="text" placeholder="选择数量" id="picker" value="1" readonly="">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </body>
 <script>
@@ -36,13 +51,13 @@ $.config = {
 <script type="text/javascript">
 $("#picker").picker({
     toolbarTemplate: '<header class="bar bar-nav">\
-  <button class="button button-link pull-left">按钮</button>\
+  \
   <button class="button button-link pull-right close-picker">确定</button>\
   <h1 class="title">标题</h1>\
   </header>',
     cols: [{
         textAlign: 'center',
-        values: ['iPhone 4', 'iPhone 4S', 'iPhone 5', 'iPhone 5S', 'iPhone 6', 'iPhone 6 Plus', 'iPad 2', 'iPad Retina', 'iPad Air', 'iPad mini', 'iPad mini 2', 'iPad mini 3']
+        values: ['1', '2','3','4','5', '6','7','8']
     }]
 });
 </script>
