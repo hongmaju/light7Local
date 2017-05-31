@@ -234,30 +234,29 @@
 <div class="popup popup-about ">
 
     <header class="bar bar-nav ">
-            <a class="icon icon-left pull-left open-panel close-popup"></a>
+            <a class="icon icon-left pull-left open-panel close-popup "></a>
             <h1 class="title ">牡丹燕菜</h1>
         </header>
-    <div class="list-block ">
-      <ul>
-        <li class="item-content item-link ">
-          <div class="item-media "><i class="icon icon-f7 "></i></div>
-          <div class="item-inner ">
-            <div class="item-title ">Name</div>
-            <div class="item-after ">Potato</div>
-          </div>
-        </li>
-        <li class="item-content item-link ">
-          <div class="item-media "><i class="icon icon-f7 "></i></div>
-          <div class="item-inner ">
-            <div class="item-title ">Amount</div>
-            <div class="item-after ">123</div>
-          </div>
-        </li>
-      </ul>
-    </div>
-   <div class="content-block">
-    <p><a href="#" class="button button-big">Big Button </a></p>
-    <!-- <p><a href="#" class="button button-big button-round">Big Round Button </a></p> -->
+        <div class="content-block">
+            <div class="list-block">
+                <ul>
+                    <!-- Text inputs -->
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner">
+                                <div class="item-title label">赠菜数量：</div>
+                                <div class="item-input">
+                                    <input type="text" placeholder="选择数量" id="picker" value="1" readonly="">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+   <div class="content-block ">
+    <p><a href="# " class="button button-big ">Big Button </a></p>
+    <!-- <p><a href="# " class="button button-big button-round ">Big Round Button </a></p> -->
   </div>
 </div>
  
@@ -275,10 +274,23 @@
 
     $.config = {
         autoInit: true, //no recommend
-         router: false
+         // router: false
     }
     </script>
     <script type="text/javascript " src="./js/light7.js "></script>
+    <script type="text/javascript ">
+$("#picker ").picker({
+    toolbarTemplate: '<header class="bar bar-nav ">\
+  \
+  <button class="button button-link pull-right close-picker ">确定</button>\
+  <h1 class="title ">标题</h1>\
+  </header>',
+    cols: [{
+        textAlign: 'center',
+        values: ['1', '2','3','4','5', '6','7','8']
+    }]
+});
+</script>
 </body>
 
 </html>
