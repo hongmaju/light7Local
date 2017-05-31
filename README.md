@@ -4,7 +4,7 @@
 
 ![Image text](https://raw.githubusercontent.com/hongmaju/light7Local/master/img/productShow/5.png)
 ![Image text](https://raw.githubusercontent.com/hongmaju/light7Local/master/img/productShow/6.png)
-![Image text](https://raw.githubusercontent.com/hongmaju/light7Local/master/img/productShow/1.png)
+![Image text](https://raw.githubusercontent.com/hongmaju/light7Local/master/img/productShow/1.jpg)
 ![Image text](https://raw.githubusercontent.com/hongmaju/light7Local/master/img/productShow/2.png)
 ![Image text](https://raw.githubusercontent.com/hongmaju/light7Local/master/img/productShow/3.png)
 ![Image text](https://raw.githubusercontent.com/hongmaju/light7Local/master/img/productShow/4.png)
