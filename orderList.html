@@ -10,7 +10,7 @@
     <script type="text/javascript" src="./js/jquery.js"></script>
     <style type="text/css">
     .bar-nav ~ .content {
-        top: 0px;
+        top: 10px;
     }
     
     div#customer-list-left ul {
@@ -19,11 +19,85 @@
     
     nav.bar.bar-tab {
         position: fixed;
+        bottom: 0px;
     }
     
     a#buyItem {
         background: red;
         color: #fff;
+    }
+    
+    #moneyPay>span {
+        color: #fff;
+        font-size: 20px;
+    }
+    
+    a#moneyPay {
+        background: rgba(51, 44, 44, 0.39);
+    }
+    
+    .list-block .item-link .item-inner {
+        background-image: none;
+    }
+    
+    .list-block .item-text {
+        color: red;
+    }
+    
+    .list-block .item-text {
+        height: 1.1rem;
+    }
+    /*增加和减少*/
+    
+    .list-cart {
+        height: 2.1rem;
+        text-align: center;
+        position: absolute;
+        right: 8px;
+        bottom: 6px;
+        border-radius: 50%;
+        width: 6.3rem;
+        /* margin-bottom: 5px; */
+    }
+    
+    .customer-remove {
+        color: #fff;
+        border-radius: 50%;
+        display: inline-block;
+        float: left;
+        width: 2.1rem;
+        height: 2.1rem;
+        line-height: 2.1rem;
+        text-align: center;
+        background: #ADADAD;
+        font-size: 1.6rem;
+    }
+    
+    .customer-num {
+        display: inline-block;
+        float: left;
+        /* width: 2.1rem; */
+        width: 2.1rem;
+        height: 2.1rem;
+        line-height: 2.1rem;
+    }
+    
+    .customer-add {
+        color: #fff;
+        border-radius: 50%;
+        display: inline-block;
+        float: left;
+        width: 2.1rem;
+        height: 2.1rem;
+        line-height: 2.1rem;
+        text-align: center;
+        background: #39b867;
+        font-size: 1.6rem;
+    }
+    
+    input.customer-text_box_num {
+        display: inline-block;
+        text-align: center;
     }
     </style>
 </head>
@@ -39,7 +113,6 @@
         </header>
         <!-- 这里是页面内容区 -->
         <div class="content">
-
             <div class="list-block media-list">
                 <ul>
                     <li>
@@ -47,11 +120,18 @@
                             <div class="item-media"><img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" style='width: 4rem;'></div>
                             <div class="item-inner">
                                 <div class="item-title-row">
-                                    <div class="item-title">牡丹燕菜</div>
-                                    <div class="item-after">$15</div>
+                                    <div class="item-title">水煮牛肉</div>
+                                    <!-- <div class="item-after">$15</div> -->
                                 </div>
-                                <div class="item-subtitle">标题</div>
-                                <div class="item-text">此处是文本内容...</div>
+                                <!-- <div class="item-subtitle">$15</div> -->
+                                <div class="item-text">￥15</div>
+                                <div class="list-cart">
+                                    <div class="customer-remove">-</div>
+                                    <div class="customer-num">
+                                        <input readonly="" class="customer-text_box_num" name="" type="text" value="0">
+                                    </div>
+                                    <div class="customer-add">+</div>
+                                </div>
                             </div>
                         </a>
                     </li>
@@ -61,10 +141,17 @@
                             <div class="item-inner">
                                 <div class="item-title-row">
                                     <div class="item-title">水煮牛肉</div>
-                                    <div class="item-after">$15</div>
+                                    <!-- <div class="item-after">$15</div> -->
                                 </div>
-                                <div class="item-subtitle">标题</div>
-                                <div class="item-text">此处是文本内容...</div>
+                                <!-- <div class="item-subtitle">$15</div> -->
+                                <div class="item-text">￥15</div>
+                                <div class="list-cart">
+                                    <div class="customer-remove">-</div>
+                                    <div class="customer-num">
+                                        <input readonly="" class="customer-text_box_num" name="" type="text" value="0">
+                                    </div>
+                                    <div class="customer-add">+</div>
+                                </div>
                             </div>
                         </a>
                     </li>
@@ -73,11 +160,18 @@
                             <div class="item-media"><img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" style='width: 4rem;'></div>
                             <div class="item-inner">
                                 <div class="item-title-row">
-                                    <div class="item-title">四川麻辣锅</div>
-                                    <div class="item-after">$15</div>
+                                    <div class="item-title">水煮牛肉</div>
+                                    <!-- <div class="item-after">$15</div> -->
                                 </div>
-                                <div class="item-subtitle">标题</div>
-                                <div class="item-text">此处是文本内容...</div>
+                                <!-- <div class="item-subtitle">$15</div> -->
+                                <div class="item-text">￥15</div>
+                                <div class="list-cart">
+                                    <div class="customer-remove">-</div>
+                                    <div class="customer-num">
+                                        <input readonly="" class="customer-text_box_num" name="" type="text" value="0">
+                                    </div>
+                                    <div class="customer-add">+</div>
+                                </div>
                             </div>
                         </a>
                     </li>
@@ -86,117 +180,33 @@
                             <div class="item-media"><img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" style='width: 4rem;'></div>
                             <div class="item-inner">
                                 <div class="item-title-row">
-                                    <div class="item-title">河南滋补锅</div>
-                                    <div class="item-after">$15</div>
+                                    <div class="item-title">水煮牛肉</div>
+                                    <!-- <div class="item-after">$15</div> -->
                                 </div>
-                                <div class="item-subtitle">标题</div>
-                                <div class="item-text">此处是文本内容...</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="item-link item-content">
-                            <div class="item-media"><img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" style='width: 4rem;'></div>
-                            <div class="item-inner">
-                                <div class="item-title-row">
-                                    <div class="item-title">河南滋补锅</div>
-                                    <div class="item-after">$15</div>
+                                <!-- <div class="item-subtitle">$15</div> -->
+                                <div class="item-text">￥15</div>
+                                <div class="list-cart">
+                                    <div class="customer-remove">-</div>
+                                    <div class="customer-num">
+                                        <input readonly="" class="customer-text_box_num" name="" type="text" value="0">
+                                    </div>
+                                    <div class="customer-add">+</div>
                                 </div>
-                                <div class="item-subtitle">标题</div>
-                                <div class="item-text">此处是文本内容...</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="item-link item-content">
-                            <div class="item-media"><img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" style='width: 4rem;'></div>
-                            <div class="item-inner">
-                                <div class="item-title-row">
-                                    <div class="item-title">河南滋补锅</div>
-                                    <div class="item-after">$15</div>
-                                </div>
-                                <div class="item-subtitle">标题</div>
-                                <div class="item-text">此处是文本内容...</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="item-link item-content">
-                            <div class="item-media"><img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" style='width: 4rem;'></div>
-                            <div class="item-inner">
-                                <div class="item-title-row">
-                                    <div class="item-title">河南滋补锅</div>
-                                    <div class="item-after">$15</div>
-                                </div>
-                                <div class="item-subtitle">标题</div>
-                                <div class="item-text">此处是文本内容...</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="item-link item-content">
-                            <div class="item-media"><img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" style='width: 4rem;'></div>
-                            <div class="item-inner">
-                                <div class="item-title-row">
-                                    <div class="item-title">河南滋补锅</div>
-                                    <div class="item-after">$15</div>
-                                </div>
-                                <div class="item-subtitle">标题</div>
-                                <div class="item-text">此处是文本内容...</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="item-link item-content">
-                            <div class="item-media"><img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" style='width: 4rem;'></div>
-                            <div class="item-inner">
-                                <div class="item-title-row">
-                                    <div class="item-title">河南滋补锅</div>
-                                    <div class="item-after">$15</div>
-                                </div>
-                                <div class="item-subtitle">标题</div>
-                                <div class="item-text">此处是文本内容...</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="item-link item-content">
-                            <div class="item-media"><img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" style='width: 4rem;'></div>
-                            <div class="item-inner">
-                                <div class="item-title-row">
-                                    <div class="item-title">河南滋补锅</div>
-                                    <div class="item-after">$15</div>
-                                </div>
-                                <div class="item-subtitle">标题</div>
-                                <div class="item-text">此处是文本内容...</div>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="item-link item-content">
-                            <div class="item-media"><img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" style='width: 4rem;'></div>
-                            <div class="item-inner">
-                                <div class="item-title-row">
-                                    <div class="item-title">河南滋补锅</div>
-                                    <div class="item-after">$15</div>
-                                </div>
-                                <div class="item-subtitle">标题</div>
-                                <div class="item-text">此处是文本内容...</div>
                             </div>
                         </a>
                     </li>
                 </ul>
             </div>
             <nav class="bar bar-tab">
-               <a class="tab-item" href="#">
-                    <span class="icon icon-message"></span>
-                    <span class="tab-label">金额</span>
-                    <span class="badge">￥2</span>
-                </a>
                 <a class="tab-item" href="#">
                     <span class="icon icon-cart"></span>
                     <span class="tab-label">购物车</span>
                     <span class="badge">2</span>
+                </a>
+                <a class="tab-item" href="#" id="moneyPay">
+                    <!--  <span class="icon icon-message"></span> -->
+                    <span class="tab-label">￥24</span>
+                    <!--   <span class="badge">￥2</span> -->
                 </a>
                 <a class="tab-item" href="#" id="buyItem">选好了</a>
             </nav>
