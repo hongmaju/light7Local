@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+  <link rel="shortcut icon" href="./favicon.ico">
+	<title>Document</title>
+	
+	<link rel="stylesheet" href="./css/light7.css">
+<script type="text/javascript" src="./js/jquery.js"></script>
+
+</head>
+<body>
+<!-- page 容器 -->
+<div class="page">
+  <!-- 标题栏 -->
+  <header class="bar bar-nav">
+    <a class="icon icon-me pull-left open-panel"></a>
+    <h1 class="title">加载指示器</h1>
+  </header>
+
+ <div class="content">
+    <div class="content-block">
+      <p><a href="#" class="open-preloader">Open Preloader</a></p>
+      <p><a href="#" class="open-preloader-title">Open Preloader with custom title</a></p>
+       <p><a href="#" class="open-indicator">Open Indicator</a></p>
+    </div>
+  </div>  
+
+
+</div>
+<script>
+    //关闭light7自带路由(需在调用light7.min.js之前关闭)，使用vue-router
+	
+  $.config = {
+    autoInit: true //no recommend
+  }
+
+    </script>
+<script type="text/javascript" src="./js/light7.js"></script>	
+<script type="text/javascript">
+  $(document).on('click', '.open-preloader', function () {
+    $.showPreloader();
+    setTimeout(function () {
+        $.hidePreloader();
+    }, 2000);
+  });
+  $(document).on('click','.open-preloader-title', function () {
+    $.showPreloader('Custom Title')
+    setTimeout(function () {
+        $.hidePreloader();
+    }, 2000);
+  });  
+  $(document).on('click','.open-indicator', function () {
+      $.showIndicator();
+      setTimeout(function () {
+          $.hideIndicator();
+      }, 2000);
+  });
+</script>
+</body>
+</html>
