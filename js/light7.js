@@ -2370,6 +2370,18 @@ Device/OS Detection
         $.closeModal($toast);
       }, time || 2000);
     };
+    //自定义弹出框
+    $.customToast= function(msg, time,top,left) {
+      var $toast = $("<div  class='modal toast customToast' style=\"background: none; color: red;\">"+msg+"</div>").appendTo(document.body);
+      $(".customToast").css("left",left);
+       $(".customToast").css("top",top);
+      $.openModal($toast);
+      setTimeout(function() {
+        $.closeModal($toast);
+      }, time || 2000);
+    };
+
+    
     $.openModal = function (modal) {
         if(defaults.closePrevious) $.closeModal();
         modal = $(modal);
