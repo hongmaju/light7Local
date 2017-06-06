@@ -101,6 +101,21 @@
         text-align: center;
     }
     /*之前的样式*/
+    
+    div#div_tc {
+        margin-bottom: 0rem;
+        position: absolute;
+        z-index: 999;
+        width: 100%;
+    }
+    
+    div#div_tc_list {
+        margin-top: 0rem;
+        padding-top: 139px;
+        overflow: auto;
+        height: 100%;
+        padding-bottom: 50px;
+    }
     </style>
 </head>
 
@@ -136,7 +151,6 @@
                 </a>
                 <h1 class="title">套餐菜品添加修改</h1>
             </header>
-         
             <div class="list-block media-list" id="div_tc">
                 <ul>
                     <li data-typeid="101">
@@ -157,38 +171,22 @@
                             </div>
                         </a>
                     </li>
-                    <li data-typeid="151">
+                </ul>
+            </div>
+            <div class="list-block  media-list" id="div_tc_list">
+                <ul>
+                    <li data-typeid="101">
                         <a class="item-link item-content">
                             <div class="item-media"><img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" style="width: 4rem;"></div>
                             <div class="item-inner">
                                 <div class="item-title-row">
-                                    <div class="item-title">鱼香肉丝 </div>
+                                    <div class="item-title">牡丹燕菜44 </div>
                                 </div>
-                                <div class="item-text">￥50</div>
-                                <div class="list-cart" data-price="50" data-barcode="100000" data-mealid="16530164358968318" data-mealbh="100000" data-typeid="151" data-tc="Y" data-cz="N" data-sjc="N">
-                                    <div class="customer-remove">-</div>
-                                    <div class="customer-num">
+                                <div class="item-text">￥300</div>
+                                <div class="list-cart" data-price="300" data-barcode="5366977545" data-mealid="10628113059671202" data-mealbh="1002" data-typeid="101" data-tc="N" data-cz="N" data-sjc="N">
+                                    <div class="customer-num" style="float: none;">
                                         <input readonly="" class="customer-text_box_num" name="" type="text" value="0">
                                     </div>
-                                    <div class="customer-add">+</div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li data-typeid="151">
-                        <a class="item-link item-content">
-                            <div class="item-media"><img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" style="width: 4rem;"></div>
-                            <div class="item-inner">
-                                <div class="item-title-row">
-                                    <div class="item-title">鱼香肉丝 </div>
-                                </div>
-                                <div class="item-text">￥0</div>
-                                <div class="list-cart" data-price="0" data-barcode="100001" data-mealid="16620173144546861" data-mealbh="100001" data-typeid="151" data-tc="N" data-cz="N" data-sjc="N">
-                                    <div class="customer-remove">-</div>
-                                    <div class="customer-num">
-                                        <input readonly="" class="customer-text_box_num" name="" type="text" value="0">
-                                    </div>
-                                    <div class="customer-add">+</div>
                                 </div>
                             </div>
                         </a>
@@ -198,19 +196,18 @@
                             <div class="item-media"><img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" style="width: 4rem;"></div>
                             <div class="item-inner">
                                 <div class="item-title-row">
-                                    <div class="item-title">鱼香肉丝 </div>
+                                    <div class="item-title">牡丹燕菜 </div>
                                 </div>
-                                <div class="item-text">￥25</div>
-                                <div class="list-cart" data-price="25" data-barcode="100005" data-mealid="17329141149830425" data-mealbh="100005" data-typeid="101" data-tc="N" data-cz="N" data-sjc="N">
-                                    <div class="customer-remove">-</div>
-                                    <div class="customer-num">
+                                <div class="item-text">￥300</div>
+                                <div class="list-cart" data-price="300" data-barcode="5366977545" data-mealid="10628113059671202" data-mealbh="1002" data-typeid="101" data-tc="N" data-cz="N" data-sjc="N">
+                                    <div class="customer-num" style="float: none;">
                                         <input readonly="" class="customer-text_box_num" name="" type="text" value="0">
                                     </div>
-                                    <div class="customer-add">+</div>
                                 </div>
                             </div>
                         </a>
                     </li>
+                    
                 </ul>
             </div>
             <nav class="bar bar-tab">
