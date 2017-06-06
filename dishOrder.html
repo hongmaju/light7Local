@@ -131,8 +131,24 @@
     
     img.customer-zf-img {
         height: 1.8rem;
-        margin-left: 6rem;
+        margin-left: 3rem;
         /* margin-top: 0.1rem; */
+    }
+    
+    a#btnCancleZf {
+        background: #A5A410;
+        color: white;
+        /* height: 70px; */
+        /* line-height: 70px; */
+    }
+    
+    a#btnOkZf {
+        background: #008000;
+        color: white;
+    }
+    
+    div#customer-zf-list {
+        margin-top: 4.4rem;
     }
     </style>
 </head>
@@ -163,82 +179,145 @@
         </div>
         <!-- 套餐 -->
         <div class="page" id="routers-TcPage">
-            <header class="bar bar-nav">
-                <a class="button button-link button-nav pull-left back">
-                    <span class="icon icon-left"></span> 返回
-                </a>
-                <h1 class="title">套餐菜品添加修改</h1>
-            </header>
-            <div class="list-block media-list" id="div_tc">
-                <ul>
-                    <li data-typeid="101">
-                        <a class="item-link item-content">
-                            <div class="item-media"><img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" style="width: 4rem;"></div>
-                            <div class="item-inner">
-                                <div class="item-title-row">
-                                    <div class="item-title">套餐C </div>
-                                </div>
-                                <div class="item-text">￥300</div>
-                                <div class="list-cart" data-price="300" data-barcode="5366977545" data-mealid="10628113059671202" data-mealbh="1002" data-typeid="101" data-tc="N" data-cz="N" data-sjc="N">
-                                    <div class="customer-remove">-</div>
-                                    <div class="customer-num">
-                                        <input readonly="" class="customer-text_box_num" name="" type="text" value="0">
+            <div class="content">
+                <header class="bar bar-nav">
+                    <a class="button button-link button-nav pull-left back">
+                        <span class="icon icon-left"></span> 返回
+                    </a>
+                    <h1 class="title">套餐菜品添加修改</h1>
+                </header>
+                <div class="list-block media-list" id="div_tc">
+                    <ul>
+                        <li data-typeid="101">
+                            <a class="item-link item-content">
+                                <div class="item-media"><img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" style="width: 4rem;"></div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">套餐C </div>
                                     </div>
-                                    <div class="customer-add">+</div>
+                                    <div class="item-text">￥300</div>
+                                    <div class="list-cart" data-price="300" data-barcode="5366977545" data-mealid="10628113059671202" data-mealbh="1002" data-typeid="101" data-tc="N" data-cz="N" data-sjc="N">
+                                        <div class="customer-remove">-</div>
+                                        <div class="customer-num">
+                                            <input readonly="" class="customer-text_box_num" name="" type="text" value="0">
+                                        </div>
+                                        <div class="customer-add">+</div>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list-block  media-list" id="div_tc_list">
+                    <ul>
+                        <li data-typeid="101">
+                            <a class="item-link item-content">
+                                <div class="item-media"><img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" style="width: 4rem;"></div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">牡丹燕菜44 </div>
+                                    </div>
+                                    <div class="item-text">￥300</div>
+                                    <img class="customer-zf-img" src="./img/Container.png">
+                                    <div class="list-cart" data-price="300" data-barcode="5366977545" data-mealid="10628113059671202" data-mealbh="1002" data-typeid="101" data-tc="N" data-cz="N" data-sjc="N">
+                                        <div class="customer-num" style="float: none;">
+                                            <input readonly="" class="customer-text_box_num" name="" type="text" value="0">
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li data-typeid="101">
+                            <a class="item-link item-content">
+                                <div class="item-media"><img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" style="width: 4rem;"></div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">牡丹燕菜 </div>
+                                    </div>
+                                    <div class="item-text">￥300</div>
+                                    <img class="customer-zf-img" src="./img/Container.png">
+                                    <div class="list-cart" data-price="300" data-barcode="5366977545" data-mealid="10628113059671202" data-mealbh="1002" data-typeid="101" data-tc="N" data-cz="N" data-sjc="N">
+                                        <div class="customer-num" style="float: none;">
+                                            <input readonly="" class="customer-text_box_num" name="" type="text" value="0">
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <nav class="bar bar-tab">
+                    <a class="tab-item" href="#" id="btnCancleTc">取消</a>
+                    <a class="tab-item" href="#" id="btnOkTc">确定</a>
+                </nav>
             </div>
-            <div class="list-block  media-list" id="div_tc_list">
-                <ul>
-                    <li data-typeid="101">
-                        <a class="item-link item-content">
-                            <div class="item-media"><img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" style="width: 4rem;"></div>
-                            <div class="item-inner">
-                                <div class="item-title-row">
-                                    <div class="item-title">牡丹燕菜44 </div>
-                                </div>
-                                <div class="item-text">￥300</div>
-                                <img class="customer-zf-img" src="./img/Container.png">
-                                <div class="list-cart" data-price="300" data-barcode="5366977545" data-mealid="10628113059671202" data-mealbh="1002" data-typeid="101" data-tc="N" data-cz="N" data-sjc="N">
-                                    <div class="customer-num" style="float: none;">
-                                        <input readonly="" class="customer-text_box_num" name="" type="text" value="0">
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li data-typeid="101">
-                        <a class="item-link item-content">
-                            <div class="item-media"><img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" style="width: 4rem;"></div>
-                            <div class="item-inner">
-                                <div class="item-title-row">
-                                    <div class="item-title">牡丹燕菜 </div>
-                                </div>
-                                <div class="item-text">￥300</div>
-                                 <img class="customer-zf-img" src="./img/Container.png">
-                                <div class="list-cart" data-price="300" data-barcode="5366977545" data-mealid="10628113059671202" data-mealbh="1002" data-typeid="101" data-tc="N" data-cz="N" data-sjc="N">
-                                    <div class="customer-num" style="float: none;">
-                                        <input readonly="" class="customer-text_box_num" name="" type="text" value="0">
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <nav class="bar bar-tab">
-                <a class="tab-item" href="#" id="btnCancleTc">取消</a>
-                <a class="tab-item" href="#" id="btnOkTc">确定</a>
-            </nav>
         </div>
         <div class="page" id="routers-sjcPage">
+            <div class="content"></div>
         </div>
         <div class="page" id="routers-czPage">
+            <div class="content"></div>
         </div>
         <div class="page" id="routers-dishList">
+            <div class="content"></div>
+        </div>
+        <!-- 做法 -->
+        <div class="page" id="routers-dishzf">
+            <div class="content">
+                <header class="bar bar-nav">
+                    <a class="button button-link button-nav pull-left back">
+                        <span class="icon icon-left"></span> 返回
+                    </a>
+                    <h1 class="title">客人做法要求</h1>
+                </header>
+                <div class="bar bar-header-secondary">
+                     <h1 class="title">基本类型</h1>
+                </div>
+                <div class="list-block media-list" id="customer-zf-list">
+                    <ul>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="checkbox">
+                                <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">不放葱、蒜</div>
+                                        <div class="item-after">(+1)</div>
+                                    </div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="checkbox">
+                                <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">加肉</div>
+                                        <div class="item-after">(+10)</div>
+                                    </div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="checkbox">
+                                <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">加水</div>
+                                        <div class="item-after"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <nav class="bar bar-tab">
+                    <a class="tab-item" href="#" id="btnCancleZf">取消</a>
+                    <a class="tab-item" href="#" id="btnOkZf">确定</a>
+                </nav>
+            </div>
         </div>
     </div>
     <script>
@@ -257,6 +336,12 @@
     }
     </script>
     <script type="text/javascript" src="./js/light7.js"></script>
+    <script type="text/javascript">
+    $(".customer-zf-img").on("click", function() {
+
+        $.router.loadPage("#routers-dishzf");
+    });
+    </script>
 </body>
 
 </html>
