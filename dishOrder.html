@@ -140,6 +140,45 @@
     header#header-tc {
         position: fixed;
     }
+    
+    li.customer-nysoft-item {
+        cursor: default;
+        float: left;
+        list-style-type: none;
+    }
+    
+    li.customer-nysoft-item div {
+        font-size: 18px;
+        position: relative;
+        display: block;
+        width: 80%;
+        height: 41px;
+        margin-right: 3px;
+        cursor: pointer;
+        text-align: center;
+        border: 1px solid #e8e8e8;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -o-border-radius: 5px;
+        border-radius: 5px;
+        margin-left: 15px;
+        margin-top: 9px;
+        line-height: 41px;
+        color: #000;
+        float: left;
+        background: #eee;
+        box-shadow: 0 5px 1px #999;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    div#keyboard-sjc ul {
+        -webkit-padding-start: 0px;
+    }
+    
+    div#keyboard-sjc {
+        margin-top: 100px;
+    }
     </style>
 </head>
 
@@ -412,8 +451,75 @@
                 </nav>
             </div>
         </div>
+        <!-- 时价菜 -->
         <div class="page" id="routers-sjcPage">
-            <div class="content"></div>
+            <div class="content">
+                <header class="bar bar-nav">
+                    <a class="button button-link button-nav pull-left back">
+                        <span class="icon icon-left"></span> 返回
+                    </a>
+                    <h1 class="title">128元生日宴</h1>
+                </header>
+                <div class="bar bar-header-secondary">
+                    <h1 class="title">￥128</h1>
+                </div>
+                <div id="keyboard-sjc">
+                    <ul>
+                        <li class="customer-nysoft-item" data-val="1" style="width: 33.33%; height: 60px;">
+                            <div>
+                                1</div>
+                        </li>
+                        <li class="customer-nysoft-item" data-val="2" style="width: 33.33%; height: 60px;">
+                            <div>
+                                2</div>
+                        </li>
+                        <li class="customer-nysoft-item" data-val="3" style="width: 33.33%; height: 60px;">
+                            <div>
+                                3</div>
+                        </li>
+                        <li class="customer-nysoft-item" data-val="4" style="width: 33.33%; height: 60px;">
+                            <div>
+                                4</div>
+                        </li>
+                        <li class="customer-nysoft-item" data-val="5" style="width: 33.33%; height: 60px;">
+                            <div>
+                                5</div>
+                        </li>
+                        <li class="customer-nysoft-item" data-val="6" style="width: 33.33%; height: 60px;">
+                            <div>
+                                6</div>
+                        </li>
+                        <li class="customer-nysoft-item" data-val="7" style="width: 33.33%; height: 60px;">
+                            <div>
+                                7</div>
+                        </li>
+                        <li class="customer-nysoft-item" data-val="8" style="width: 33.33%; height: 60px;">
+                            <div>
+                                8</div>
+                        </li>
+                        <li class="customer-nysoft-item" data-val="9" style="width: 33.33%; height: 60px;">
+                            <div>
+                               9</div>
+                        </li>
+                        <li class="customer-nysoft-item" data-val="0" style="width: 33.33%; height: 60px;">
+                            <div>
+                                0</div>
+                        </li>
+                        <li class="customer-nysoft-item" data-val="." style="width: 33.33%; height: 60px;">
+                            <div>
+                                .</div>
+                        </li>
+                        <li class="customer-nysoft-item" data-val="00" style="width: 33.33%; height: 60px;">
+                            <div>
+                                清除</div>
+                        </li>
+                    </ul>
+                </div>
+                <nav class="bar bar-tab">
+                    <!--  <a class="tab-item" href="#" id="btnCancleZf">取消</a> -->
+                    <a class="tab-item" href="#" id="btnOkZf">确定</a>
+                </nav>
+            </div>
         </div>
         <div class="page" id="routers-czPage">
             <div class="content"></div>
