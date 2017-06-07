@@ -203,6 +203,7 @@
     
     .list-block .item-input {
         margin-top: 0rem;
+        margin-bottom: 0rem;
     }
     
     .label-switch .customer-checkbox:after {
@@ -211,6 +212,41 @@
         line-height: 1.4rem;
     }
     </style>
+    <script type="text/javascript">
+    $(document).on('click', '.customer-listControl', function() {
+        var buttons1 = [{
+            text: '请选择',
+            label: true
+        }, {
+            text: '删除',
+            bold: true,
+            color: 'danger',
+            onClick: function() {
+                $.alert("删除");
+            }
+        }, {
+            text: '客人要求',
+            bold: true,
+            color: 'danger',
+            onClick: function() {
+            	$.router.loadPage("#routers-dishzf");
+                // $.alert("客人要求");
+            }
+
+        }, {
+            text: '拆分',
+            onClick: function() {
+                $.alert("拆分");
+            }
+        }];
+        var buttons2 = [{
+            text: '取消',
+            bg: 'danger'
+        }];
+        var groups = [buttons1, buttons2];
+        $.actions(groups);
+    });
+    </script>
 </head>
 
 <body>
@@ -640,84 +676,21 @@
                         <li>
                             <div class="item-content">
                                 <!--  <div class="item-media"><img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" style="width: 2.2rem;"></div> -->
-                                <div class="item-inner">
+                                <div class="item-inner customer-listControl">
                                     <div class="item-title-row">
                                         <div class="item-title">四川麻辣锅</div>
-                                        <div class="item-after">¥38 X 1</div>
-                                        <div class="item-after">
-                                            <!-- <div class="item-title label">叫</div> -->
-                                            <div class="item-input">
-                                                <label class="label-switch">
-                                                    <input type="checkbox">
-                                                    <div class="checkbox customer-checkbox"></div>
-                                                </label>
-                                            </div>
-                                        </div>
+                                        <div class="item-title">¥38 X 1</div>
                                     </div>
                                     <!-- <div class="item-subtitle">子标题</div> -->
                                 </div>
-                            </div>
-                        </li>
-                         <li>
-                            <div class="item-content">
-                                <!--  <div class="item-media"><img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" style="width: 2.2rem;"></div> -->
-                                <div class="item-inner">
-                                    <div class="item-title-row">
-                                        <div class="item-title">四川麻辣锅</div>
-                                        <div class="item-after">¥38 X 1</div>
-                                        <div class="item-after">
-                                            <!-- <div class="item-title label">叫</div> -->
-                                            <div class="item-input">
-                                                <label class="label-switch">
-                                                    <input type="checkbox">
-                                                    <div class="checkbox customer-checkbox"></div>
-                                                </label>
-                                            </div>
-                                        </div>
+                                <div class="item-after">
+                                    <!-- <div class="item-title label">叫</div> -->
+                                    <div class="item-input">
+                                        <label class="label-switch">
+                                            <input type="checkbox">
+                                            <div class="checkbox customer-checkbox"></div>
+                                        </label>
                                     </div>
-                                    <!-- <div class="item-subtitle">子标题</div> -->
-                                </div>
-                            </div>
-                        </li>
-                         <li>
-                            <div class="item-content">
-                                <!--  <div class="item-media"><img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" style="width: 2.2rem;"></div> -->
-                                <div class="item-inner">
-                                    <div class="item-title-row">
-                                        <div class="item-title">四川麻辣锅</div>
-                                        <div class="item-after">¥38 X 1</div>
-                                        <div class="item-after">
-                                            <!-- <div class="item-title label">叫</div> -->
-                                            <div class="item-input">
-                                                <label class="label-switch">
-                                                    <input type="checkbox">
-                                                    <div class="checkbox customer-checkbox"></div>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- <div class="item-subtitle">子标题</div> -->
-                                </div>
-                            </div>
-                        </li>
-                         <li>
-                            <div class="item-content">
-                                <!--  <div class="item-media"><img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" style="width: 2.2rem;"></div> -->
-                                <div class="item-inner">
-                                    <div class="item-title-row">
-                                        <div class="item-title">四川麻辣锅</div>
-                                        <div class="item-after">¥38 X 1</div>
-                                        <div class="item-after">
-                                            <!-- <div class="item-title label">叫</div> -->
-                                            <div class="item-input">
-                                                <label class="label-switch">
-                                                    <input type="checkbox">
-                                                    <div class="checkbox customer-checkbox"></div>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- <div class="item-subtitle">子标题</div> -->
                                 </div>
                             </div>
                         </li>
