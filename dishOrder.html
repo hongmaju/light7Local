@@ -229,6 +229,24 @@
     div#customer-zf-list-click {
         margin-top: 87px;
     }
+    /*新的样式*/
+    
+    div#div_tc-zflist {
+        margin-top: 2.2rem;
+    }
+    
+/*    .cusomer-remove-ico {
+        width: 25px;
+        padding-left: 4px;
+    }*/
+    
+    .customer-add-button {
+        bottom: 11px;
+    }
+    
+    div.customer-zf-list-delete {
+        margin-top: 0rem;
+    }
     </style>
     <script type="text/javascript">
     $(document).on('click', '.customer-listControl', function() {
@@ -292,6 +310,9 @@
                         </li>
                         <li>
                             <a href="#routers-TcZfDouble">可多次选择做法</a>
+                        </li>
+                        <li>
+                            <a href="#routers-TcZfDouble-zflist">选择做法列表</a>
                         </li>
                     </ul>
                 </div>
@@ -1062,6 +1083,131 @@
                 </div>
             </div>
         </div>
+        <!-- 套餐做法列表加减 -->
+        <div class="page" id="routers-TcZfDouble-zflist">
+            <div class="content">
+                <header class="bar bar-nav">
+                    <a class="button button-link button-nav pull-left back">
+                        <span class="icon icon-left"></span> 返回
+                    </a>
+                    <h1 class="title">客人做法要求</h1>
+                </header>
+                <div class="buttons-tab">
+                    <a href="#tab1" class="tab-link active button">基本类型</a>
+                    <a href="#tab2" class="tab-link button">川菜做法</a>
+                </div>
+                <div class="tabs">
+                    <div id="tab1" class="tab active">
+                        <div class="list-block media-list customer-zf-list-delete" >
+                            <ul>
+                                <li>
+                                    <a href="#" class="item-link item-content">
+                                      <!--   <div class="item-media cusomer-remove-ico"><i class="icon icon-remove"></i></div> -->
+                                       <div class="item-media  cusomer-remove-ico"><img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" style="width: 2.2rem;"></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">不放葱、蒜</div>
+                                            </div>
+                                            <div class="item-subtitle">(+1)</div>
+                                            <div class="list-cart customer-add-button" data-price="300" data-barcode="5366977545" data-mealid="10628113059671202" data-mealbh="1002" data-typeid="101" data-tc="N" data-cz="N" data-sjc="N">
+                                                <div class="customer-remove">-</div>
+                                                <div class="customer-num">
+                                                    <input readonly="" class="customer-text_box_num" name="" type="text" value="0">
+                                                </div>
+                                                <div class="customer-add">+</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="item-link item-content">
+                                        <div class="item-media  cusomer-remove-ico"><img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" style="width: 2.2rem;"></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">加肉</div>
+                                            </div>
+                                            <div class="item-subtitle">(+10)</div>
+                                            <div class="list-cart customer-add-button" data-price="300" data-barcode="5366977545" data-mealid="10628113059671202" data-mealbh="1002" data-typeid="101" data-tc="N" data-cz="N" data-sjc="N">
+                                                <div class="customer-remove">-</div>
+                                                <div class="customer-num">
+                                                    <input readonly="" class="customer-text_box_num" name="" type="text" value="0">
+                                                </div>
+                                                <div class="customer-add">+</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="item-link item-content">
+                                       <div class="item-media  cusomer-remove-ico"><img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" style="width: 2.2rem;"></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">不放葱、蒜</div>
+                                            </div>
+                                            <div class="item-subtitle">(+1)</div>
+                                            <div class="list-cart customer-add-button" data-price="300" data-barcode="5366977545" data-mealid="10628113059671202" data-mealbh="1002" data-typeid="101" data-tc="N" data-cz="N" data-sjc="N">
+                                                <div class="customer-remove">-</div>
+                                                <div class="customer-num">
+                                                    <input readonly="" class="customer-text_box_num" name="" type="text" value="0">
+                                                </div>
+                                                <div class="customer-add">+</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="tab2" class="tab">
+                        <div class="list-block media-list customer-zf-list-delete">
+                            <ul>
+                                <li>
+                                    <a href="#" class="item-link item-content">
+                                        <div class="item-media  cusomer-remove-ico"><img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" style="width: 2.2rem;"></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">不放葱、蒜</div>
+                                            </div>
+                                            <div class="item-subtitle">(+1)</div>
+                                            <div class="list-cart customer-add-button" data-price="300" data-barcode="5366977545" data-mealid="10628113059671202" data-mealbh="1002" data-typeid="101" data-tc="N" data-cz="N" data-sjc="N">
+                                                <div class="customer-remove">-</div>
+                                                <div class="customer-num">
+                                                    <input readonly="" class="customer-text_box_num" name="" type="text" value="0">
+                                                </div>
+                                                <div class="customer-add">+</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="item-link item-content">
+                                        <div class="item-media  cusomer-remove-ico"><img src="http://gqianniu.alicdn.com/bao/uploaded/i4//tfscom/i3/TB10LfcHFXXXXXKXpXXXXXXXXXX_!!0-item_pic.jpg_250x250q60.jpg" style="width: 2.2rem;"></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">加肉</div>
+                                            </div>
+                                            <div class="item-subtitle">(+10)</div>
+                                            <div class="list-cart customer-add-button" data-price="300" data-barcode="5366977545" data-mealid="10628113059671202" data-mealbh="1002" data-typeid="101" data-tc="N" data-cz="N" data-sjc="N">
+                                                <div class="customer-remove">-</div>
+                                                <div class="customer-num">
+                                                    <input readonly="" class="customer-text_box_num" name="" type="text" value="0">
+                                                </div>
+                                                <div class="customer-add">+</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <nav class="bar bar-tab">
+                    <!-- <a class="tab-item" href="#" id="btnCancleTc">取消</a> -->
+                    <a class="tab-item" href="#" id="btnOkTc-zflist">确定</a>
+                </nav>
+            </div>
+        </div>
     </div>
     <script>
     //关闭light7自带路由(需在调用light7.min.js之前关闭)，使用vue-router
@@ -1095,10 +1241,14 @@
     $("#customer-zf-list-click ul li").on("click", function() {
         $.closeModal('.popup-about');
 
-        var html="<li><label class=\"label-checkbox item-content\"><div class=\"item-media\"><i class=\"icon icon-remove\"></i></div><div class=\"item-inner\"><div class=\"item-title-row\"><div class=\"item-title\">"+$(this).attr("zfname")+"</div><div class=\"item-after\">"+$(this).attr("zfaddmoney")+"</div></div></div></label></li>";
+        var html = "<li><label class=\"label-checkbox item-content\"><div class=\"item-media\"><i class=\"icon icon-remove\"></i></div><div class=\"item-inner\"><div class=\"item-title-row\"><div class=\"item-title\">" + $(this).attr("zfname") + "</div><div class=\"item-after\">" + $(this).attr("zfaddmoney") + "</div></div></div></label></li>";
 
         $("#customer-zf-list-double ul").prepend(html);
 
+    });
+    // cusomer-remove-ico
+    $(".cusomer-remove-ico").on("click", function() {
+        $.toast("点击删除");
     });
     </script>
 </body>
