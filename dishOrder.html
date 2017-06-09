@@ -225,6 +225,10 @@
         background: none;
         display: none;
     }
+    
+    div#customer-zf-list-click {
+        margin-top: 87px;
+    }
     </style>
     <script type="text/javascript">
     $(document).on('click', '.customer-listControl', function() {
@@ -961,7 +965,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- About Popup -->
+                <!-- 点击做法生成做法选择项 -->
                 <div class="popup popup-about">
                     <div class="content-block">
                         <header class="bar bar-nav">
@@ -973,12 +977,12 @@
                         <div class="bar bar-header-secondary">
                             <h1 class="title">基本类型</h1>
                         </div>
-                        <div class="list-block media-list" id="customer-zf-list">
+                        <div class="list-block media-list" id="customer-zf-list-click">
                             <ul>
-                                <li>
+                                <li zfName="不放葱、蒜" zfAddMoney="(+1)">
                                     <label class="label-checkbox item-content">
                                         <div class="item-media">
-                                            </i>
+                                            <i class="icon icon-left"></i>
                                         </div>
                                         <div class="item-inner">
                                             <div class="item-title-row">
@@ -988,10 +992,10 @@
                                         </div>
                                     </label>
                                 </li>
-                                <li>
+                                <li zfName="加肉" zfAddMoney="(+10)">
                                     <label class="label-checkbox item-content">
                                         <div class="item-media">
-                                            </i>
+                                            <i class="icon icon-left"></i>
                                         </div>
                                         <div class="item-inner">
                                             <div class="item-title-row">
@@ -1001,10 +1005,10 @@
                                         </div>
                                     </label>
                                 </li>
-                                <li>
+                                <li zfName="加水" zfAddMoney="">
                                     <label class="label-checkbox item-content">
                                         <div class="item-media">
-                                            </i>
+                                            <i class="icon icon-left"></i>
                                         </div>
                                         <div class="item-inner">
                                             <div class="item-title-row">
@@ -1109,6 +1113,10 @@
 
     $(document).on('click', '#customer-zf-list-double-li-base', function() {
         $.popup('.popup-about');
+    });
+
+    $("#customer-zf-list-click ul li").on("click", function() {
+        $.closeModal('.popup-about')
     });
     </script>
 </body>
