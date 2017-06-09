@@ -2,6 +2,8 @@
 
 将light7本地化，使用的页面是html，并添加了自定义内容的弹出框
 
+![Image text](https://raw.githubusercontent.com/hongmaju/light7Local/master/img/productShow/15.png)
+![Image text](https://raw.githubusercontent.com/hongmaju/light7Local/master/img/productShow/14.png)
 ![Image text](https://raw.githubusercontent.com/hongmaju/light7Local/master/img/productShow/13.png)
 ![Image text](https://raw.githubusercontent.com/hongmaju/light7Local/master/img/productShow/12.png)
 ![Image text](https://raw.githubusercontent.com/hongmaju/light7Local/master/img/productShow/11.png)
