@@ -211,6 +211,20 @@
         text-align: center;
         line-height: 1.4rem;
     }
+    /*2017-06-09新加*/
+    
+    .buttons-tab {
+        margin-top: 44px;
+    }
+    
+    div.customer-zf-list-double {
+        margin-top: 0px;
+    }
+    
+    .popup-overlay {
+        background: none;
+        display: none;
+    }
     </style>
     <script type="text/javascript">
     $(document).on('click', '.customer-listControl', function() {
@@ -271,6 +285,9 @@
                         </li>
                         <li>
                             <a href="#routers-TcHc">套餐换菜</a>
+                        </li>
+                        <li>
+                            <a href="#routers-TcZfDouble">可多次选择做法</a>
                         </li>
                     </ul>
                 </div>
@@ -825,7 +842,6 @@
                                         <div class="item-title">石头</div>
                                         <div class="item-after">17:14</div>
                                     </div>
-                                    
                                 </div>
                             </label>
                         </li>
@@ -838,7 +854,6 @@
                                         <div class="item-title">剪刀</div>
                                         <div class="item-after">17:14</div>
                                     </div>
-                                   
                                 </div>
                             </label>
                         </li>
@@ -848,6 +863,222 @@
                     <!--  <a class="tab-item" href="#" id="btnCancleZf">取消</a> -->
                     <a class="tab-item" href="#" id="btnOktcHc">确定</a>
                 </nav>
+            </div>
+        </div>
+        <!-- double做法 -->
+        <div class="page" id="routers-TcZfDouble">
+            <div class="content">
+                <header class="bar bar-nav">
+                    <a class="button button-link button-nav pull-left back">
+                        <span class="icon icon-left"></span> 返回
+                    </a>
+                    <h1 class="title">客人做法要求</h1>
+                </header>
+                <div class="buttons-tab">
+                    <a href="#tab1" class="tab-link active button">基本类型</a>
+                    <a href="#tab2" class="tab-link button">川菜做法</a>
+                </div>
+                <div class="tabs">
+                    <div id="tab1" class="tab active">
+                        <div class="list-block media-list customer-zf-list-double" id="customer-zf-list-double">
+                            <ul>
+                                <li>
+                                    <label class="label-checkbox item-content">
+                                        <div class="item-media"><i class="icon icon-remove"></i></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">不放葱、蒜</div>
+                                                <div class="item-after">(+1)</div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="label-checkbox item-content">
+                                        <input type="checkbox" name="checkbox">
+                                        <div class="item-media"><i class="icon icon-remove"></i></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">加肉</div>
+                                                <div class="item-after">(+10)</div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="label-checkbox item-content">
+                                        <div class="item-media"><i class="icon icon-remove"></i></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">加水</div>
+                                                <div class="item-after"></div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li id="customer-zf-list-double-li-base">
+                                    <label class="label-checkbox item-content">
+                                        <div class="item-media"></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">+添加做法</div>
+                                                <div class="item-after"></div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="tab2" class="tab">
+                        <div class="list-block media-list customer-zf-list-double">
+                            <ul>
+                                <li>
+                                    <label class="label-checkbox item-content">
+                                        <input type="checkbox" name="checkbox">
+                                        <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">不放葱、蒜</div>
+                                                <div class="item-after">(+1)</div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="label-checkbox item-content">
+                                        <input type="checkbox" name="checkbox">
+                                        <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">加肉</div>
+                                                <div class="item-after">(+10)</div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- About Popup -->
+                <div class="popup popup-about">
+                    <div class="content-block">
+                        <header class="bar bar-nav">
+                            <a class="button button-link button-nav pull-left close-popup">
+                                <span class="icon icon-left"></span> 返回
+                            </a>
+                            <h1 class="title">选择做法要求</h1>
+                        </header>
+                        <div class="bar bar-header-secondary">
+                            <h1 class="title">基本类型</h1>
+                        </div>
+                        <div class="list-block media-list" id="customer-zf-list">
+                            <ul>
+                                <li>
+                                    <label class="label-checkbox item-content">
+                                        <div class="item-media">
+                                            </i>
+                                        </div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">不放葱、蒜</div>
+                                                <div class="item-after">(+1)</div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="label-checkbox item-content">
+                                        <div class="item-media">
+                                            </i>
+                                        </div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">加肉</div>
+                                                <div class="item-after">(+10)</div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="label-checkbox item-content">
+                                        <div class="item-media">
+                                            </i>
+                                        </div>
+                                        <div class="item-inner">
+                                            <div class="item-title-row">
+                                                <div class="item-title">加水</div>
+                                                <div class="item-after"></div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <nav class="bar bar-tab">
+                    <!--  <a class="tab-item" href="#" id="btnCancleZf">取消</a> -->
+                    <a class="tab-item" href="#" id="btnOkZf-double">确定</a>
+                </nav>
+            </div>
+        </div>
+        <!-- 点击做法添加 -->
+        <div class="page" id="routers-dishzf-click">
+            <div class="content">
+                <header class="bar bar-nav">
+                    <a class="button button-link button-nav pull-left back">
+                        <span class="icon icon-left"></span> 返回
+                    </a>
+                    <h1 class="title">客人做法要求</h1>
+                </header>
+                <div class="bar bar-header-secondary">
+                    <h1 class="title">基本类型</h1>
+                </div>
+                <div class="list-block media-list" id="customer-zf-list">
+                    <ul>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <div class="item-media">
+                                    </i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">不放葱、蒜</div>
+                                        <div class="item-after">(+1)</div>
+                                    </div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <div class="item-media">
+                                    </i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">加肉</div>
+                                        <div class="item-after">(+10)</div>
+                                    </div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <div class="item-media">
+                                    </i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">加水</div>
+                                        <div class="item-after"></div>
+                                    </div>
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -869,8 +1100,15 @@
     <script type="text/javascript" src="./js/light7.js"></script>
     <script type="text/javascript">
     $(".customer-zf-img").on("click", function() {
-
         $.router.loadPage("#routers-dishzf");
+    });
+
+    // $("#customer-zf-list-double-li-base").on("click", function() {
+    //     $.router.loadPage("#routers-dishzf-click");
+    // });
+
+    $(document).on('click', '#customer-zf-list-double-li-base', function() {
+        $.popup('.popup-about');
     });
     </script>
 </body>
