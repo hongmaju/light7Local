@@ -891,29 +891,6 @@
                                         <div class="item-media"><i class="icon icon-remove"></i></div>
                                         <div class="item-inner">
                                             <div class="item-title-row">
-                                                <div class="item-title">不放葱、蒜</div>
-                                                <div class="item-after">(+1)</div>
-                                            </div>
-                                        </div>
-                                    </label>
-                                </li>
-                                <li>
-                                    <label class="label-checkbox item-content">
-                                        <input type="checkbox" name="checkbox">
-                                        <div class="item-media"><i class="icon icon-remove"></i></div>
-                                        <div class="item-inner">
-                                            <div class="item-title-row">
-                                                <div class="item-title">加肉</div>
-                                                <div class="item-after">(+10)</div>
-                                            </div>
-                                        </div>
-                                    </label>
-                                </li>
-                                <li>
-                                    <label class="label-checkbox item-content">
-                                        <div class="item-media"><i class="icon icon-remove"></i></div>
-                                        <div class="item-inner">
-                                            <div class="item-title-row">
                                                 <div class="item-title">加水</div>
                                                 <div class="item-after"></div>
                                             </div>
@@ -940,7 +917,7 @@
                                 <li>
                                     <label class="label-checkbox item-content">
                                         <input type="checkbox" name="checkbox">
-                                        <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                                        <div class="item-media"><i class="icon icon-remove"></i></div>
                                         <div class="item-inner">
                                             <div class="item-title-row">
                                                 <div class="item-title">不放葱、蒜</div>
@@ -952,7 +929,7 @@
                                 <li>
                                     <label class="label-checkbox item-content">
                                         <input type="checkbox" name="checkbox">
-                                        <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                                        <div class="item-media"><i class="icon icon-remove"></i></div>
                                         <div class="item-inner">
                                             <div class="item-title-row">
                                                 <div class="item-title">加肉</div>
@@ -1116,7 +1093,12 @@
     });
 
     $("#customer-zf-list-click ul li").on("click", function() {
-        $.closeModal('.popup-about')
+        $.closeModal('.popup-about');
+
+        var html="<li><label class=\"label-checkbox item-content\"><div class=\"item-media\"><i class=\"icon icon-remove\"></i></div><div class=\"item-inner\"><div class=\"item-title-row\"><div class=\"item-title\">"+$(this).attr("zfname")+"</div><div class=\"item-after\">"+$(this).attr("zfaddmoney")+"</div></div></div></label></li>";
+
+        $("#customer-zf-list-double ul").prepend(html);
+
     });
     </script>
 </body>
