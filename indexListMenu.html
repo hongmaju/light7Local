@@ -222,7 +222,7 @@
     </script>
     <script type="text/javascript" src="./js/light7.js"></script>
     <script language="JavaScript">
-    function ShowMenu(obj, noid) {
+    function ShowMenuTest(obj, noid) {
         var block = document.getElementById(noid);
         var n = noid.substr(noid.length - 1);
         if (noid.length == 4) {
@@ -259,6 +259,14 @@
             block.className = "no";
             obj.style.color = "";
         }
+    }
+
+    function ShowMenu(obj, noid) {
+        var block = $("#" + noid);
+        var thisUl = $(obj);
+        block.toggle();
+        //var block = document.getElementById(noid);
+
     }
     </script>
 </body>
