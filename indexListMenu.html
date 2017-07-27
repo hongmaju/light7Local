@@ -81,46 +81,124 @@
     .customer-left-panel {
         background: #E6E6E6;
     }
+
+    .search-input {
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+
+    .customer-time-check {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .customer-search-conditon {
+        width: 97px;
+        height: 50px;
+        font-size: 20px;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 50px;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
     </style>
 </head>
 
 <body>
-    <!-- page 容器 -->
-    <div class="page">
-        <!-- 标题栏 -->
-        <header class="bar bar-nav">
-            <a class="icon icon-me pull-left open-panel"></a>
-            <h1 class="title">标题</h1>
-        </header>
-        <!-- 工具栏 -->
-        <nav class="bar bar-tab">
-            <a class="tab-item active" href="#">
+    <div class="page-group">
+        <!-- page 容器 -->
+        <div class="page" id='routerSearch'>
+            <!-- 标题栏 -->
+            <header class="bar bar-nav">
+                <button class="button button-link button-nav pull-left">
+                    <span class="icon icon-refresh"></span> 刷新
+                </button>
+                <h1 class="title"> 
+           	 <div class="search-input">
+     			 <label class="icon icon-search" for="search"></label>
+     			 <input type="search" id='search' placeholder='条件查询'/>
+   			 </div>
+   			</h1>
+                <button class="button button-link button-nav pull-right  open-panel">
+                    目录
+                    <span class="icon icon-app"></span>
+                </button>
+            </header>
+            <!-- 工具栏 -->
+            <nav class="bar bar-tab">
+                <a class="tab-item active" href="#">
       <span class="icon icon-home"></span>
       <span class="tab-label">首页</span>
     </a>
-            <a class="tab-item" href="#">
+                <a class="tab-item" href="#">
       <span class="icon icon-star"></span>
       <span class="tab-label">收藏</span>
     </a>
-            <a class="tab-item" href="#">
+                <a class="tab-item" href="#">
       <span class="icon icon-settings"></span>
       <span class="tab-label">设置</span>
     </a>
-        </nav>
-        <!-- 这里是页面内容区 -->
-        <div class="content">
-            <div class="content-block">这里是content</div>
+            </nav>
+            <!-- 这里是页面内容区 -->
+            <div class="content">
+                <div class="content-block">这里是content</div>
+            </div>
         </div>
-    </div>
-    <!-- popup, panel 等放在这里 -->
-    <div class="panel-overlay"></div>
-    <!-- Left Panel with Reveal effect -->
-    <div class="panel panel-left panel-reveal customer-left-panel">
-        <div class="content-block">
-            <p><a href="#" class="close-panel">关闭</a></p>
-            <div id="menu">
-                <h1 onClick="javascript:ShowMenu(this,'NO0')"> + 一级菜单A</h1>
-                <span id="NO0" class="no">
+        <div class="page" id='routerCondition'>
+            <header class="bar bar-nav">
+                <a class="button button-link button-nav pull-left back" href="#routerSearch">
+      <span class="icon icon-left"></span>
+      返回
+    </a>
+                <h1 class='title'>路由</h1>
+            </header>
+            <div class="content">
+                <table>
+                    <tr>
+                        <td>
+                            <div class="list-block customer-time-check">
+                                <ul>
+                                    <!-- Text inputs -->
+                                    <li>
+                                        <div class="item-content">
+                                            <div class="item-inner">
+                                                <div class="item-title label">开始时间</div>
+                                                <div class="item-input">
+                                                    <input type="text" placeholder="" id="datetime-pickerStart" readonly="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item-content">
+                                            <div class="item-inner">
+                                                <div class="item-title label">结束时间</div>
+                                                <div class="item-input">
+                                                    <input type="text" placeholder="" id="datetime-pickerEnd" readonly="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td>
+                            <p><a href="#" class="button customer-search-conditon">搜索</a></p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- popup, panel 等放在这里 -->
+        <div class="panel-overlay"></div>
+        <!-- Left Panel with Reveal effect -->
+        <div class="panel panel-left panel-reveal customer-left-panel">
+            <div class="content-block">
+                <p><a href="#" class="close-panel">关闭</a></p>
+                <div id="menu">
+                    <h1 onClick="javascript:ShowMenu(this,'NO0')"> + 一级菜单A</h1>
+                    <span id="NO0" class="no">
    <h2 onClick="javascript:ShowMenu(this,'NO00')"> + 一级菜单A_1</h2>
    <ul id="NO00" class="no">
     <li>一级菜单A_0</li>
@@ -160,8 +238,8 @@
     <li>一级菜单A_7</li>
    </ul>
 </span>
-                <h1 onClick="javascript:ShowMenu(this,'NO1')"> + 二级菜单B</h1>
-                <span id="NO1" class="no">
+                    <h1 onClick="javascript:ShowMenu(this,'NO1')"> + 二级菜单B</h1>
+                    <span id="NO1" class="no">
    <h2 onClick="javascript:ShowMenu(this,'NO10')"> + 二级菜单B_1</h2>
    <ul id="NO10" class="no">
     <li>二级菜单B_0</li>
@@ -185,8 +263,8 @@
     <li>二级菜单B_7</li>
    </ul>
 </span>
-                <h1 onClick="javascript:ShowMenu(this,'NO2')"> + 三级菜单C</h1>
-                <span id="NO2" class="no">
+                    <h1 onClick="javascript:ShowMenu(this,'NO2')"> + 三级菜单C</h1>
+                    <span id="NO2" class="no">
    <h2 onClick="javascript:ShowMenu(this,'NO20')"> + 三级菜单C_1</h2>
    <ul id="NO20" class="no">
     <li>三级菜单C_0</li>
@@ -209,8 +287,9 @@
     <li>三级菜单C_4</li>
    </ul>
 </span>
+                </div>
+                <!-- Click on link with "close-panel" class will close panel -->
             </div>
-            <!-- Click on link with "close-panel" class will close panel -->
         </div>
     </div>
     <script>
@@ -268,6 +347,22 @@
         //var block = document.getElementById(noid);
 
     }
+
+    $("#search").focus(function() {
+        $.router.loadPage("#routerCondition"); //加载内联页面
+    });
+    $("#datetime-pickerStart").datetimePicker({
+        toolbarTemplate: '<header class="bar bar-nav">\
+    <button class="button button-link pull-right close-picker">确定</button>\
+    <h1 class="title">选择日期和时间</h1>\
+    </header>'
+    });
+    $("#datetime-pickerEnd").datetimePicker({
+        toolbarTemplate: '<header class="bar bar-nav">\
+    <button class="button button-link pull-right close-picker">确定</button>\
+    <h1 class="title">选择日期和时间</h1>\
+    </header>'
+    });
     </script>
 </body>
 
